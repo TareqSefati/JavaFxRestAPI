@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="500.0" style="-fx-background-color: #e3e3e3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/tsp-rounded-logo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </HBox>
+      <Pane prefHeight="427.0" prefWidth="480.0" style="-fx-background-color: #fff; -fx-border-color: #999999;">
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+         <children>
+            <VBox prefHeight="420.0" prefWidth="480.0">
+               <children>
+                  <TextArea editable="false" focusTraversable="false" prefHeight="358.0" prefWidth="480.0" text="# JavaFx REST Api Example&#10;This is a simple JavaFx desktop application to communicate with REST api &#10;and show responses. &#10;&#10;## Features&#10;1. Perform GET, POST, PUT, DELETE request to any REST api service.&#10;2. Add content body for POST, PUT request.&#10;3. Show response.&#10;4. Response body and content body placed in tab pane.&#10;5. Clear response, content and url data.&#10;" />
+                  <Label prefHeight="24.0" prefWidth="259.0" text="Developed by - Md. Tareq Sefati" textFill="#1d186f">
+                     <font>
+                        <Font name="STLiti" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="480.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/mail-fill.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="30.0" text="tareq.sefati@gmail.com" textFill="#1d186f">
+                           <font>
+                              <Font name="STLiti" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="177.0" prefHeight="41.0" prefWidth="480.0" spacing="10.0">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/whatsapp-fill.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="30.0" text="+8801745578700" textFill="#1d186f">
+                           <font>
+                              <Font name="STLiti" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</VBox>

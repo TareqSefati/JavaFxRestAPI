@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxrestapi.MainViewController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="500.0" spacing="10.0">
+               <children>
+                  <Label text="Enter URL" />
+                  <TextField fx:id="urlName" prefHeight="25.0" prefWidth="365.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="60.0" prefHeight="48.0" prefWidth="500.0" spacing="10.0" style="-fx-background-color: #A3A3A3;">
+               <children>
+                  <Button fx:id="btnGetReq" mnemonicParsing="false" onMouseClicked="#makeGetReq" text="Get Request">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnPostReq" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#makePostReq" text="Post Request">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDeleteReq" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#makePutReq" text="Put Request">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDeleteReq" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#makeDeleteReq" text="Delete Request">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="48.0" prefWidth="500.0" spacing="10.0" style="-fx-background-color: #A3A3A3; -fx-border-color: #e3e3e3; -fx-border-width: 1 0 0 0;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#clearUrl" text="Clear URL">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearResponse" text="Clear Response">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="175.0" layoutY="22.0" mnemonicParsing="false" onAction="#clearContent" text="Clear content">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <TabPane fx:id="tabPan" prefHeight="425.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="responseTab" text="Response">
+                     <content>
+                        <TextArea fx:id="responseText" editable="false" wrapText="true" />
+                     </content>
+                  </Tab>
+                <Tab fx:id="contentTab" text="Content">
+                     <content>
+                        <TextArea fx:id="contentText" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+                     </content>
+                  </Tab>
+              </tabs>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TabPane>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exitApplication" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="showAbout" mnemonicParsing="false" onAction="#showAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
